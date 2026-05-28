@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Expert Hub — Twitter/X Header 1500×500</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1500px; height: 500px; overflow: hidden; }
+
+  .header {
+    width: 1500px;
+    height: 500px;
+    background: #0b0f0c;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+
+  /* Grid */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,242,80,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,242,80,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Diagonal lime split */
+  .split-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 600px;
+    height: 100%;
+    background: linear-gradient(160deg, rgba(26,46,31,0.5) 0%, rgba(200,242,80,0.06) 100%);
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  /* Big glow */
+  .glow-center {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(200,242,80,0.07) 0%, transparent 65%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  /* Small glow right */
+  .glow-right {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(200,242,80,0.12) 0%, transparent 65%);
+    right: -50px;
+    bottom: -50px;
+    border-radius: 50%;
+  }
+
+  /* Content */
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 80px;
+  }
+
+  .left {
+    flex: 1;
+    max-width: 750px;
+  }
+
+  .logo img {
+    height: 44px;
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #f3f0e8;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  h1 .lime { color: #c8f250; }
+
+  .sub {
+    margin-top: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 16px;
+    color: rgba(243,240,232,0.55);
+    line-height: 1.5;
+  }
+
+  /* Right */
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .pill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(26,46,31,0.7);
+    border: 1px solid rgba(200,242,80,0.18);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(243,240,232,0.8);
+    white-space: nowrap;
+  }
+
+  .pill-icon {
+    width: 8px;
+    height: 8px;
+    background: #c8f250;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .stat-block {
+    display: flex;
+    gap: 24px;
+    padding: 16px 24px;
+    background: rgba(243,240,232,0.04);
+    border: 1px solid rgba(243,240,232,0.08);
+    border-radius: 16px;
+  }
+
+  .s-n {
+    font-size: 24px;
+    font-weight: 800;
+    color: #c8f250;
+    display: block;
+    line-height: 1;
+  }
+
+  .s-l {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 10px;
+    color: rgba(243,240,232,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .s-divider {
+    width: 1px;
+    background: rgba(243,240,232,0.08);
+    align-self: stretch;
+  }
+
+  /* Bottom strip */
+  .strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c8f250, #a7d92c 50%, transparent);
+  }
+
+  /* Corner decoration */
+  .corner-tl {
+    position: absolute;
+    top: 24px;
+    right: 80px;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid rgba(200,242,80,0.3);
+    border-right: 2px solid rgba(200,242,80,0.3);
+  }
+
+  .corner-br {
+    position: absolute;
+    bottom: 24px;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid rgba(200,242,80,0.15);
+    border-left: 2px solid rgba(200,242,80,0.15);
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="grid-bg"></div>
+  <div class="split-right"></div>
+  <div class="glow-center"></div>
+  <div class="glow-right"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+    <div class="left">
+      <div class="logo">
+        <img src="../public/logo.png" alt="Digital Expert Hub">
+      </div>
+      <h1>Digital Marketing<br>Agency in <span class="lime">India</span></h1>
+      <p class="sub">SEO · Google Ads · Social Media · Web Design<br>Trusted by 1,000+ businesses · 7+ years · Free strategy call</p>
+    </div>
+
+    <div class="right">
+      <div class="pill-list">
+        <div class="pill"><div class="pill-icon"></div> #1 SEO Results</div>
+        <div class="pill"><div class="pill-icon"></div> Google Ads Experts</div>
+        <div class="pill"><div class="pill-icon"></div> 4.9★ Client Rating</div>
+        <div class="pill"><div class="pill-icon"></div> Free Strategy Audit</div>
+      </div>
+      <div class="stat-block">
+        <div>
+          <span class="s-n">1K+</span>
+          <span class="s-l">Clients</span>
+        </div>
+        <div class="s-divider"></div>
+        <div>
+          <span class="s-n">7 Yrs</span>
+          <span class="s-l">Experience</span>
+        </div>
+        <div class="s-divider"></div>
+        <div>
+          <span class="s-n">₹3Cr</span>
+          <span class="s-l">Ad Spend</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip"></div>
+</div>
+</body>
+</html>

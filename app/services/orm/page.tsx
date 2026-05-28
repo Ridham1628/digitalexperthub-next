@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'orm'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Online Reputation Management (ORM)',
-  description: 'Expert Online Reputation Management (ORM) from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Online Reputation Management India',
+  description: 'Protect and build your online reputation with expert ORM services. Suppress negative content, build positive presence & manage your brand. Free ORM audit.',
   path: '/services/orm',
 })
 

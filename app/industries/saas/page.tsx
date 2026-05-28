@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'saas'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO for SaaS Companies',
-  description: 'Industry-specific digital marketing for saas — SEO, Google Ads, lead generation and more. Proven strategies from Digital Expert Hub.',
+  title: 'Digital Marketing for SaaS Companies',
+  description: 'Grow MRR and reduce CAC with digital marketing for SaaS & tech companies. SEO, Google Ads, content & social strategies for software businesses. Free audit.',
   path: '/industries/saas',
 })
 

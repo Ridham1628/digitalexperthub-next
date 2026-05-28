@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'real-estate'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO for Real Estate',
-  description: 'Industry-specific digital marketing for real-estate — SEO, Google Ads, lead generation and more. Proven strategies from Digital Expert Hub.',
+  title: 'Digital Marketing for Real Estate',
+  description: 'Generate qualified buyer & seller leads with digital marketing for real estate in India. SEO, Google Ads & social media for property businesses. Free consult.',
   path: '/industries/real-estate',
 })
 

@@ -3,10 +3,16 @@ import { constructMetadata } from '@/lib/metadata'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Client Testimonials & Reviews',
-  description: 'Read real reviews and testimonials from businesses that have grown with Digital Expert Hub\'s digital marketing services. Rated 4.9 stars from 40+ verified reviews.',
+  title: 'Client Reviews & Testimonials',
+  description: 'Read reviews from 40+ businesses that grew with Digital Expert Hub — 340% traffic growth, 6.5x ROAS, #1 local rankings & more. Rated 4.9 out of 5 stars.',
   path: '/testimonials',
 })
+
+const StarIcon = ({ filled = true }: { filled?: boolean }) => (
+  <svg viewBox="0 0 16 16" fill={filled ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth={1.5} aria-hidden="true" className="w-4 h-4 text-lime">
+    <path d="M8 1l1.5 3.5L13 6l-2.5 2.5.5 3.5L8 10.5 5 12l.5-3.5L3 6l3.5-.5L8 1z" />
+  </svg>
+)
 
 const testimonials = [
   { name: 'Rajiv Sharma', role: 'Founder, TechSpark Solutions', rating: 5, result: '+340% organic traffic', industry: 'SaaS', quote: 'Digital Expert Hub transformed our online presence completely. Our organic traffic increased by 340% in just 6 months. Their SEO team is exceptional — they truly understand what drives results.' },
@@ -26,45 +32,48 @@ const testimonials = [
 export default function TestimonialsPage() {
   return (
     <>
-      <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 bg-ink overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-30" />
+      <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 bg-ink overflow-hidden" aria-labelledby="testimonials-h1">
+        <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
         <div className="wrap relative z-10 text-center">
           <p className="section-label mb-4">Client Success Stories</p>
-          <h1 className="text-display-xl font-display font-bold text-paper mb-6 max-w-3xl mx-auto">
+          <h1 id="testimonials-h1" className="text-display-xl font-display font-bold text-paper mb-6 max-w-3xl mx-auto">
             Real results from{' '}
             <span className="font-serif italic text-lime">real businesses</span>
           </h1>
-          <div className="flex items-center justify-center gap-2 mb-4">
-            {Array.from({ length: 5 }).map((_, i) => <span key={i} className="text-lime text-2xl">★</span>)}
+          <div className="flex items-center justify-center gap-1 mb-4" role="img" aria-label="5 out of 5 stars">
+            {Array.from({ length: 5 }).map((_, i) => <StarIcon key={i} filled />)}
           </div>
-          <p className="text-paper/65 text-lg">Rated 4.9 out of 5 from 40+ verified client reviews</p>
+          <p className="text-paper/70 text-lg">Rated 4.9 out of 5 from 40+ verified client reviews</p>
         </div>
       </section>
 
-      <section className="section bg-paper">
+      <section className="section bg-paper" aria-labelledby="testimonials-grid">
         <div className="wrap">
+          <h2 id="testimonials-grid" className="sr-only">Client testimonials</h2>
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="break-inside-avoid bg-paper-2 rounded-3xl p-7 border border-ink/8 mb-6">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => <span key={i} className="text-lime">★</span>)}
+              <article key={t.name} className="break-inside-avoid bg-paper-2 rounded-3xl p-7 border border-ink/8 mb-6">
+                <div className="flex gap-1 mb-4" role="img" aria-label={`${t.rating} out of 5 stars`}>
+                  {Array.from({ length: t.rating }).map((_, i) => <StarIcon key={i} filled />)}
                 </div>
                 <blockquote className="text-ink/80 text-sm leading-relaxed mb-5">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-display font-bold text-ink text-sm">{t.name}</p>
-                    <p className="text-xs text-ink/50">{t.role}</p>
+                <footer>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-display font-bold text-ink text-sm">{t.name}</p>
+                      <p className="text-xs text-ink/65">{t.role}</p>
+                    </div>
+                    <span className="px-3 py-1 bg-lime/15 border border-lime/20 rounded-full text-xs font-display font-bold text-lime-deep">
+                      {t.result}
+                    </span>
                   </div>
-                  <span className="px-3 py-1 bg-lime/15 border border-lime/20 rounded-full text-xs font-display font-bold text-lime-deep">
-                    {t.result}
-                  </span>
-                </div>
-                <div className="mt-3 pt-3 border-t border-ink/8">
-                  <span className="text-xs text-ink/40 font-display uppercase tracking-wide">{t.industry}</span>
-                </div>
-              </div>
+                  <div className="mt-3 pt-3 border-t border-ink/8">
+                    <span className="text-xs text-ink/65 font-display uppercase tracking-wide">{t.industry}</span>
+                  </div>
+                </footer>
+              </article>
             ))}
           </div>
         </div>

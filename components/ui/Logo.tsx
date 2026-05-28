@@ -1,80 +1,48 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface LogoProps {
-  size?: number
+  /** Height in pixels of the full logo image (width scales proportionally) */
+  height?: number
   className?: string
-  showText?: boolean
+  /** When true renders the icon-only favicon mark (square crop) */
+  iconOnly?: boolean
+  /** Not used — kept for API compat; logo colours are baked into the PNG */
   light?: boolean
 }
 
 export default function Logo({
-  size = 44,
+  height = 36,
   className,
-  showText = true,
-  light = false,
+  iconOnly = false,
 }: LogoProps) {
   return (
     <Link
       href="/"
-      className={cn('inline-flex items-center gap-3 group', className)}
+      className={cn('inline-flex items-center group', className)}
       aria-label="Digital Expert Hub - Home"
     >
-      {/* Icon */}
-      <div
-        className="relative flex-shrink-0 rounded-xl flex items-center justify-center"
-        style={{
-          width: size,
-          height: size,
-          background: light ? '#0b0f0c' : '#c8f250',
-        }}
-      >
-        <svg
-          width={size * 0.65}
-          height={size * 0.72}
-          viewBox="0 0 56 62"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M 7,4 L 7,58 L 22,58 A 27,27 0 0 0 22,4 Z"
-            stroke={light ? '#c8f250' : '#0b0f0c'}
-            strokeWidth="7"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-            fill="none"
-          />
-          <rect x="15" y="16" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="25" y="18.5" width="15" height="3" rx="1" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="15" y="27" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="25" y="27" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="35" y="29.5" width="10" height="3" rx="1" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="15" y="38" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="25" y="38" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-          <rect x="35" y="38" width="8" height="8" rx="1.5" fill={light ? '#c8f250' : '#0b0f0c'} />
-        </svg>
-      </div>
-
-      {/* Text */}
-      {showText && (
-        <div className="flex flex-col leading-none">
-          <span
-            className={cn(
-              'text-[15px] font-display font-bold tracking-wider uppercase',
-              light ? 'text-ink' : 'text-paper'
-            )}
-          >
-            DIGITAL
-          </span>
-          <span
-            className={cn(
-              'text-[10px] font-display font-semibold tracking-[0.15em] uppercase',
-              light ? 'text-ink/60' : 'text-lime'
-            )}
-          >
-            EXPERT HUB
-          </span>
-        </div>
+      {iconOnly ? (
+        /* Favicon / icon-only mark */
+        <Image
+          src="/favicon.png"
+          alt="Digital Expert Hub"
+          width={height}
+          height={height}
+          className="object-contain"
+          priority
+        />
+      ) : (
+        /* Full horizontal logo — natural aspect ratio 2.5:1 (500×200 px source) */
+        <Image
+          src="/logo.png"
+          alt="Digital Expert Hub"
+          width={Math.round(height * 2.5)}
+          height={height}
+          className="object-contain"
+          priority
+        />
       )}
     </Link>
   )

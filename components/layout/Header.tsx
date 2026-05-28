@@ -11,6 +11,7 @@ const services = [
     category: 'SEO Services',
     items: [
       { label: 'SEO Services', href: '/services/seo', desc: 'Rank higher on Google' },
+      { label: 'AI SEO Optimization', href: '/services/ai-seo', desc: 'Future-proof for SGE & AI' },
       { label: 'Local SEO', href: '/services/local-seo', desc: 'Dominate local search' },
       { label: 'Technical SEO', href: '/services/technical-seo', desc: 'Fix site foundations' },
       { label: 'E-commerce SEO', href: '/services/ecommerce-seo', desc: 'More product visibility' },
@@ -179,7 +180,7 @@ export default function Header() {
                 Call Us
               </a>
               <button
-                className="p-2 text-paper/80 hover:text-paper transition-colors"
+                className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-paper/80 hover:text-paper transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink rounded-lg"
                 onClick={() => setMobileOpen((v) => !v)}
                 aria-label="Toggle mobile menu"
                 aria-expanded={mobileOpen}
@@ -255,14 +256,14 @@ export default function Header() {
         <div className="lg:hidden fixed inset-0 z-40 bg-ink/98 backdrop-blur-xl overflow-y-auto">
           <div className="wrap pt-24 pb-12">
             <nav className="space-y-1" aria-label="Mobile navigation">
-              <Link href="/about" className="flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg">
+              <Link href="/about" className="flex items-center justify-between p-4 min-h-[56px] rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:rounded-2xl">
                 About Us
                 <span className="text-paper/40">→</span>
               </Link>
 
               <div>
                 <button
-                  className="w-full flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg"
+                  className="w-full flex items-center justify-between p-4 min-h-[56px] rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:rounded-2xl"
                   onClick={() => setMobileServicesOpen((v) => !v)}
                 >
                   Services
@@ -309,7 +310,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex items-center justify-between p-4 rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg"
+                  className="flex items-center justify-between p-4 min-h-[56px] rounded-2xl hover:bg-white/5 text-paper font-display font-semibold text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:rounded-2xl"
                 >
                   {link.label}
                   <span className="text-paper/40">→</span>
@@ -326,9 +327,12 @@ export default function Header() {
               </Link>
               <a
                 href="tel:+917986713605"
-                className="flex items-center justify-center w-full py-4 border border-white/20 text-paper rounded-2xl font-display font-semibold text-lg"
+                className="flex items-center justify-center gap-2 w-full py-4 border border-white/20 text-paper rounded-2xl font-display font-semibold text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
-                📞 +91 79867 13605
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="w-5 h-5">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                +91 79867 13605
               </a>
             </div>
           </div>

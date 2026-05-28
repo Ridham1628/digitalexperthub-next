@@ -20,7 +20,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <section className="relative pt-28 pb-16 lg:pt-36 bg-ink overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="wrap relative z-10">
-          <nav className="flex items-center gap-2 text-xs text-paper/40 font-display mb-8">
+          <nav className="flex items-center gap-2 text-xs text-paper/65 font-display mb-8">
             <Link href="/" className="hover:text-lime">Home</Link>
             <span>/</span>
             <Link href="/case-studies" className="hover:text-lime">Case Studies</Link>
@@ -46,11 +46,18 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               { metric: '340%', label: 'Traffic Increase' },
               { metric: '6 months', label: 'Time to Results' },
               { metric: '₹15k', label: 'Monthly Budget' },
-              { metric: '4.9★', label: 'Client Rating' },
+              { metric: '4.9', label: 'Client Rating', star: true },
             ].map((s) => (
               <div key={s.label} className="bg-ink rounded-2xl p-5 text-center">
-                <div className="text-xl font-display font-bold text-lime">{s.metric}</div>
-                <div className="text-xs text-paper/50 font-display mt-1">{s.label}</div>
+                <div className="flex items-center justify-center gap-0.5 text-xl font-display font-bold text-lime">
+                  {s.metric}
+                  {(s as { star?: boolean }).star && (
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" className="w-4 h-4 mb-0.5">
+                      <path d="M8 1l1.5 3.5L13 6l-2.5 2.5.5 3.5L8 10.5 5 12l.5-3.5L3 6l3.5-.5L8 1z" />
+                    </svg>
+                  )}
+                </div>
+                <div className="text-xs text-paper/55 font-display mt-1">{s.label}</div>
               </div>
             ))}
           </div>
@@ -67,7 +74,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <ul className="space-y-2">
                 {['Full technical SEO audit and remediation', 'Keyword research and content gap analysis', 'On-page optimisation of 50+ pages', 'Content strategy with 4 posts/month', 'Link building campaign targeting 10 quality links/month', 'Google Ads restructure for 40% cost reduction'].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-ink/70">
-                    <span className="text-lime-deep">✓</span>{item}
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4 text-lime-deep flex-shrink-0"><path d="M3 8l3 3 7-6" /></svg>{item}
                   </li>
                 ))}
               </ul>

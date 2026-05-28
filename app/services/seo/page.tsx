@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'seo'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO Services',
-  description: 'Expert SEO Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'SEO Services in India',
+  description: 'Grow organic traffic with expert SEO services across India. On-page, technical, local & e-commerce SEO with proven, measurable results. Free SEO audit.',
   path: '/services/seo',
 })
 

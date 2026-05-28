@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'ecommerce'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO for E-commerce',
-  description: 'Industry-specific digital marketing for ecommerce — SEO, Google Ads, lead generation and more. Proven strategies from Digital Expert Hub.',
+  title: 'E-commerce Digital Marketing India',
+  description: 'Boost online sales with expert e-commerce digital marketing. SEO, Google Shopping ads, conversion optimisation & social media for online stores. Free audit.',
   path: '/industries/ecommerce',
 })
 

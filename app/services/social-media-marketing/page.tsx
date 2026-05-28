@@ -8,7 +8,7 @@ const SLUG = 'social-media-marketing'
 
 export const metadata: Metadata = constructMetadata({
   title: 'Social Media Marketing Services',
-  description: 'Expert Social Media Marketing Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  description: 'Build your brand and drive sales with expert social media marketing. Instagram, Facebook, LinkedIn & YouTube campaigns that generate real results. Free strategy call.',
   path: '/services/social-media-marketing',
 })
 

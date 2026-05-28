@@ -4,8 +4,8 @@ import { constructMetadata } from '@/lib/metadata'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO Company Across India',
-  description: 'Digital Expert Hub provides SEO and digital marketing services across India — Ludhiana, Mohali, Chandigarh, Delhi, Mumbai and Bangalore.',
+  title: 'Digital Marketing Agency Locations',
+  description: 'Digital Expert Hub serves businesses across India — Delhi, Mumbai, Bangalore, Chandigarh, Mohali & more. Expert digital marketing in your city. Free call.',
   path: '/locations',
 })
 

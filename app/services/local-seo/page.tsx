@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'local-seo'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Local SEO Services',
-  description: 'Expert Local SEO Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Local SEO Services India',
+  description: 'Dominate local search results and Google Maps with Local SEO. Rank for near-me searches, attract nearby customers & grow your local business. Free audit.',
   path: '/services/local-seo',
 })
 

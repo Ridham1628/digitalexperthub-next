@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'website-development'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Website Development Services',
-  description: 'Expert Website Development Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Website Development Services India',
+  description: 'Build a fast, secure & scalable website with expert web developers in India. React, Next.js & WordPress — SEO-ready from day one. Free development quote.',
   path: '/services/website-development',
 })
 

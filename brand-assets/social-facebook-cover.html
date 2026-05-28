@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=820">
+<title>Digital Expert Hub — Facebook Cover 820×312</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 820px; height: 312px; overflow: hidden; }
+
+  .cover {
+    width: 820px;
+    height: 312px;
+    background: #0b0f0c;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+
+  /* Grid background */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,242,80,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,242,80,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Glow orb */
+  .orb {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(200,242,80,0.12) 0%, transparent 70%);
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+  }
+  .orb-2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(26,46,31,0.6) 0%, transparent 70%);
+    left: 200px;
+    bottom: -60px;
+    border-radius: 50%;
+  }
+
+  /* Content */
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 48px;
+    gap: 48px;
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: rgba(200,242,80,0.12);
+    border: 1px solid rgba(200,242,80,0.25);
+    border-radius: 100px;
+    color: #c8f250;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .badge-dot {
+    width: 5px;
+    height: 5px;
+    background: #c8f250;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #f3f0e8;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h1 span {
+    color: #c8f250;
+  }
+
+  .tagline {
+    margin-top: 10px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    color: rgba(243,240,232,0.6);
+    line-height: 1.5;
+  }
+
+  /* Stats */
+  .stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 18px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-n {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    color: #c8f250;
+    line-height: 1;
+  }
+
+  .stat-l {
+    display: block;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 9px;
+    color: rgba(243,240,232,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+  }
+
+  /* Right */
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .logo-wrap {
+    background: rgba(243,240,232,0.05);
+    border: 1px solid rgba(243,240,232,0.1);
+    border-radius: 16px;
+    padding: 14px 20px;
+  }
+
+  .logo-wrap img {
+    height: 36px;
+    display: block;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .service-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(26,46,31,0.7);
+    border: 1px solid rgba(200,242,80,0.15);
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(243,240,232,0.75);
+    white-space: nowrap;
+  }
+
+  .service-tag .dot {
+    width: 4px;
+    height: 4px;
+    background: #c8f250;
+    border-radius: 50%;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: #c8f250;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0b0f0c;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  /* Lime accent bar */
+  .accent-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c8f250 30%, #a7d92c 60%, transparent);
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="grid-bg"></div>
+  <div class="orb"></div>
+  <div class="orb-2"></div>
+
+  <div class="content">
+    <div class="left">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        India's Trusted Digital Agency
+      </div>
+      <h1>Digital Marketing<br>That <span>Delivers</span> Results</h1>
+      <p class="tagline">SEO · Google Ads · Social Media · Web Design<br>Trusted by 1,000+ businesses across India</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-n">1,000+</span>
+          <span class="stat-l">Clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">7+</span>
+          <span class="stat-l">Years</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">4.9★</span>
+          <span class="stat-l">Rating</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">₹3Cr+</span>
+          <span class="stat-l">Ad Spend</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="logo-wrap">
+        <img src="../public/logo.png" alt="Digital Expert Hub">
+      </div>
+      <div class="services">
+        <div class="service-tag"><span class="dot"></span> SEO Services</div>
+        <div class="service-tag"><span class="dot"></span> Google Ads</div>
+        <div class="service-tag"><span class="dot"></span> Social Media</div>
+        <div class="service-tag"><span class="dot"></span> Web Design</div>
+      </div>
+      <div class="cta">Free Strategy Call →</div>
+    </div>
+  </div>
+
+  <div class="accent-bar"></div>
+</div>
+</body>
+</html>

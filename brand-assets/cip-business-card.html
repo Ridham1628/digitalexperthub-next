@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Expert Hub — Business Card Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 40px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    gap: 40px;
+  }
+
+  .label {
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+
+  .card-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* === CARD SPECS === */
+  /* Print: 3.5×2 inches at 300dpi = 1050×600px */
+  /* Web preview: 525×300px (0.5x) */
+
+  .card {
+    width: 525px;
+    height: 300px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+
+  /* === FRONT === */
+  .card-front {
+    background: #0b0f0c;
+  }
+
+  .card-front .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,242,80,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,242,80,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .card-front .glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(200,242,80,0.1) 0%, transparent 65%);
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+  }
+
+  .card-front .lime-corner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(26,46,31,0.8) 0%, transparent 70%);
+  }
+
+  .card-front-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px;
+  }
+
+  .card-logo img {
+    height: 28px;
+  }
+
+  .card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .card-person h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f3f0e8;
+    letter-spacing: -0.01em;
+  }
+
+  .card-person .role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #c8f250;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  .card-contact {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: rgba(243,240,232,0.6);
+    justify-content: flex-end;
+  }
+
+  .contact-dot {
+    width: 4px;
+    height: 4px;
+    background: #c8f250;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .front-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .tagline {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10px;
+    font-style: italic;
+    color: rgba(243,240,232,0.35);
+    max-width: 160px;
+    line-height: 1.4;
+  }
+
+  .qr-placeholder {
+    width: 50px;
+    height: 50px;
+    background: rgba(243,240,232,0.06);
+    border: 1px solid rgba(243,240,232,0.12);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qr-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 6px);
+    grid-template-rows: repeat(5, 6px);
+    gap: 1px;
+  }
+
+  .qr-cell {
+    background: rgba(243,240,232,0.4);
+    border-radius: 1px;
+  }
+
+  .qr-cell.empty { background: transparent; }
+
+  /* Accent line */
+  .card-front .accent-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #c8f250 40%, #a7d92c 60%, transparent);
+  }
+
+  /* === BACK === */
+  .card-back {
+    background: #c8f250;
+  }
+
+  .card-back-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    position: relative;
+  }
+
+  /* Back grid */
+  .back-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(11,15,12,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(11,15,12,0.07) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Back corner accents */
+  .back-corner-tl {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid rgba(11,15,12,0.25);
+    border-left: 2px solid rgba(11,15,12,0.25);
+  }
+
+  .back-corner-br {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid rgba(11,15,12,0.25);
+    border-right: 2px solid rgba(11,15,12,0.25);
+  }
+
+  .back-logo {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+
+  .back-logo img {
+    height: 44px;
+    filter: brightness(0);
+  }
+
+  .back-tagline {
+    position: relative;
+    z-index: 10;
+    margin-top: 14px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0b0f0c;
+    text-align: center;
+    letter-spacing: -0.01em;
+    opacity: 0.7;
+  }
+
+  .back-url {
+    position: relative;
+    z-index: 10;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(11,15,12,0.5);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  /* Section header */
+  .section-header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .section-header h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.01em;
+  }
+
+  .section-header p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+
+  /* Staff variants */
+  .variants-label {
+    color: rgba(255,255,255,0.35);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .variants-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Mini card for team variants */
+  .mini-card {
+    width: 262px;
+    height: 150px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background: #0b0f0c;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+
+  .mini-card .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,242,80,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,242,80,0.07) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .mini-card .accent-line {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #c8f250 40%, #a7d92c 60%, transparent);
+  }
+
+  .mini-card-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .mini-card img {
+    height: 18px;
+  }
+
+  .mini-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #f3f0e8;
+  }
+
+  .mini-role {
+    font-size: 9px;
+    font-weight: 600;
+    color: #c8f250;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 2px;
+  }
+
+  .mini-phone {
+    font-size: 9px;
+    color: rgba(243,240,232,0.5);
+    margin-top: 4px;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .print-note {
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    text-align: center;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+  <div class="label">Business Card — 3.5 × 2 inches (Print Ready)</div>
+
+  <!-- Front & Back -->
+  <div class="card-row">
+    <!-- Front -->
+    <div class="card card-front">
+      <div class="grid-bg"></div>
+      <div class="glow"></div>
+      <div class="lime-corner"></div>
+      <div class="accent-line"></div>
+      <div class="card-front-content">
+        <div class="card-logo">
+          <img src="../public/logo.png" alt="Digital Expert Hub">
+        </div>
+        <div class="card-main">
+          <div class="card-person">
+            <h2>Rajvir Singh</h2>
+            <div class="role">Founder & CEO</div>
+          </div>
+          <div class="card-contact">
+            <div class="contact-item"><span class="contact-dot"></span>+91 79867 13605</div>
+            <div class="contact-item"><span class="contact-dot"></span>rajvir@digitalexperthub.com</div>
+            <div class="contact-item"><span class="contact-dot"></span>digitalexperthub.com</div>
+          </div>
+        </div>
+        <div class="front-bottom">
+          <div class="tagline">Digital Marketing That Delivers Measurable Results</div>
+          <div class="qr-placeholder">
+            <div class="qr-grid">
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div>
+              <div class="qr-cell empty"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell empty"></div>
+              <div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div>
+              <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell empty"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back -->
+    <div class="card card-back">
+      <div class="back-grid"></div>
+      <div class="back-corner-tl"></div>
+      <div class="back-corner-br"></div>
+      <div class="card-back-content">
+        <div class="back-logo">
+          <img src="../public/logo.png" alt="Digital Expert Hub">
+        </div>
+        <div class="back-tagline">Results-Driven Digital Marketing</div>
+        <div class="back-url">digitalexperthub.com</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Team Variants -->
+  <div class="variants-label">Team Card Variants</div>
+  <div class="variants-grid">
+    <!-- SEO Manager -->
+    <div class="mini-card">
+      <div class="grid-bg"></div>
+      <div class="accent-line"></div>
+      <div class="mini-card-content">
+        <img src="../public/logo.png" alt="DEH">
+        <div>
+          <div class="mini-name">Priya Sharma</div>
+          <div class="mini-role">SEO Manager</div>
+          <div class="mini-phone">+91 79867 13605</div>
+        </div>
+      </div>
+    </div>
+    <!-- Ads Manager -->
+    <div class="mini-card">
+      <div class="grid-bg"></div>
+      <div class="accent-line"></div>
+      <div class="mini-card-content">
+        <img src="../public/logo.png" alt="DEH">
+        <div>
+          <div class="mini-name">Amit Verma</div>
+          <div class="mini-role">Google Ads Manager</div>
+          <div class="mini-phone">+91 79867 13605</div>
+        </div>
+      </div>
+    </div>
+    <!-- Web Dev -->
+    <div class="mini-card">
+      <div class="grid-bg"></div>
+      <div class="accent-line"></div>
+      <div class="mini-card-content">
+        <img src="../public/logo.png" alt="DEH">
+        <div>
+          <div class="mini-name">Neha Gupta</div>
+          <div class="mini-role">Web Designer</div>
+          <div class="mini-phone">+91 79867 13605</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="print-note">Print specs: 1050 × 600 px · 300 DPI · CMYK · 3mm bleed · Gloss/Matte lamination recommended</div>
+</body>
+</html>

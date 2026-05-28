@@ -4,8 +4,8 @@ import { constructMetadata } from '@/lib/metadata'
 import CtaSection from '@/components/sections/CtaSection'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Pricing — Digital Marketing Packages',
-  description: 'Transparent digital marketing pricing from Digital Expert Hub. SEO packages, Google Ads management, social media marketing and full-service digital marketing plans.',
+  title: 'Digital Marketing Pricing India',
+  description: 'Transparent digital marketing pricing from ₹15,000/month. No hidden fees, no lock-in contracts. SEO, Google Ads, social media & web design packages. Free call.',
   path: '/pricing',
 })
 
@@ -120,13 +120,15 @@ export default function PricingPage() {
                   <p className={`text-sm mb-4 ${plan.highlight ? 'text-paper/60' : 'text-ink/60'}`}>{plan.desc}</p>
                   <div className="flex items-baseline gap-1">
                     <span className={`text-4xl font-display font-bold ${plan.highlight ? 'text-paper' : 'text-ink'}`}>{plan.price}</span>
-                    <span className={`text-sm ${plan.highlight ? 'text-paper/50' : 'text-ink/50'}`}>{plan.period}</span>
+                    <span className={`text-sm ${plan.highlight ? 'text-paper/65' : 'text-ink/65'}`}>{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-3 flex-1 mb-8">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-center gap-2.5 text-sm">
-                      <span className="text-lime flex-shrink-0">✓</span>
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4 text-lime flex-shrink-0">
+                        <path d="M3 8l3 3 7-6" />
+                      </svg>
                       <span className={plan.highlight ? 'text-paper/80' : 'text-ink/70'}>{f}</span>
                     </li>
                   ))}
@@ -141,7 +143,7 @@ export default function PricingPage() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-ink/50 mt-8">
+          <p className="text-center text-sm text-ink/65 mt-8">
             All plans exclude ad spend. Minimum 3-month commitment. <Link href="/contact" className="text-lime-deep hover:underline">Request custom quote →</Link>
           </p>
         </div>
@@ -159,7 +161,7 @@ export default function PricingPage() {
               <div key={a.service} className="bg-forest/40 border border-white/10 rounded-2xl p-5">
                 <p className="text-sm font-display font-semibold text-paper mb-2">{a.service}</p>
                 <p className="text-lg font-display font-bold text-lime">{a.price}</p>
-                <span className="text-xs text-paper/40 capitalize">{a.type}</span>
+                <span className="text-xs text-paper/65 capitalize">{a.type}</span>
               </div>
             ))}
           </div>
@@ -178,9 +180,9 @@ export default function PricingPage() {
               { q: 'What\'s the free strategy call about?', a: 'A free 30-minute call where we audit your current digital presence, identify your biggest opportunities, and show you exactly what it would take to grow. No hard sell, just honest advice.' },
             ].map((f) => (
               <details key={f.q} className="bg-paper-2 rounded-2xl overflow-hidden group">
-                <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer text-ink font-display font-semibold hover:text-lime-deep transition-colors list-none">
+                <summary className="flex items-center justify-between gap-4 p-5 min-h-[48px] cursor-pointer text-ink font-display font-semibold hover:text-lime-deep transition-colors list-none">
                   {f.q}
-                  <span className="text-ink/40 group-open:rotate-45 transition-transform text-xl flex-shrink-0">+</span>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" aria-hidden="true" className="w-5 h-5 text-ink/65 group-open:rotate-45 transition-transform flex-shrink-0"><path d="M8 3v10M3 8h10"/></svg>
                 </summary>
                 <p className="px-5 pb-5 text-sm text-ink/60 leading-relaxed">{f.a}</p>
               </details>

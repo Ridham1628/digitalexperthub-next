@@ -5,8 +5,8 @@ import CtaSection from '@/components/sections/CtaSection'
 import { faqSchema } from '@/lib/schema'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Frequently Asked Questions',
-  description: 'Answers to the most common questions about digital marketing, SEO, Google Ads, social media and our services at Digital Expert Hub.',
+  title: 'Digital Marketing FAQs — Expert Answers',
+  description: 'Expert answers to common digital marketing questions — SEO costs, timelines, Google Ads ROI, what results to expect & more. Everything before you choose us.',
   path: '/faqs',
 })
 
@@ -76,9 +76,9 @@ export default function FaqsPage() {
               <div className="space-y-3">
                 {cat.faqs.map((f) => (
                   <details key={f.q} className="bg-paper-2 rounded-2xl overflow-hidden group">
-                    <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer text-ink font-display font-semibold hover:text-lime-deep transition-colors list-none">
+                    <summary className="flex items-center justify-between gap-4 p-5 min-h-[48px] cursor-pointer text-ink font-display font-semibold hover:text-lime-deep transition-colors list-none">
                       {f.q}
-                      <span className="text-ink/40 group-open:rotate-45 transition-transform text-xl flex-shrink-0">+</span>
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" aria-hidden="true" className="w-5 h-5 text-ink/65 group-open:rotate-45 transition-transform flex-shrink-0"><path d="M8 3v10M3 8h10"/></svg>
                     </summary>
                     <p className="px-5 pb-5 text-sm text-ink/60 leading-relaxed">{f.a}</p>
                   </details>

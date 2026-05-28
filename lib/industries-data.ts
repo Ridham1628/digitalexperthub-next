@@ -313,6 +313,57 @@ export const industriesData: Record<string, IndustryData> = {
       { label: 'Digital Marketing Consulting', href: '/services/digital-marketing-consulting' },
     ],
   },
+  realtors: {
+    slug: 'realtors',
+    industry: 'Realtors & Agents',
+    title: 'SEO for Realtors & Real Estate Agents',
+    headline: 'Real Estate Agent Marketing That Fills Your Pipeline With Qualified Leads',
+    subheadline:
+      'Win more listings and buyer clients with a digital presence that outranks competing agents. We help individual agents and teams build authority, generate leads and close more deals.',
+    description: 'Specialised digital marketing for real estate agents — local SEO, lead generation, Google Ads and professional website design.',
+    challenges: [
+      'Individual agents struggling to compete with large brokerages and portals',
+      'No consistent source of online leads beyond referrals',
+      'Google Business Profile not optimised for local agent searches',
+      'Website not generating buyer or seller inquiry calls',
+      'Social media presence not converting followers into clients',
+    ],
+    solutions: [
+      { icon: 'seo', title: 'Agent-Focused Local SEO', desc: 'Rank for "real estate agent in [city]" and neighbourhood-specific property searches.' },
+      { icon: 'maps', title: 'Google Maps Visibility', desc: 'Optimise your Google Business Profile to appear when buyers and sellers search locally.' },
+      { icon: 'leads', title: 'Lead Generation Funnels', desc: 'Landing pages and ad campaigns designed to capture qualified buyer and seller leads.' },
+      { icon: 'web', title: 'Agent Website Design', desc: 'IDX-integrated or custom websites that showcase your listings and capture inquiries.' },
+      { icon: 'social', title: 'Social Media Content', desc: 'Professional social content that positions you as the go-to agent in your area.' },
+      { icon: 'reviews', title: 'Review & Reputation Building', desc: 'Automated systems to collect client reviews and build your credibility online.' },
+    ],
+    results: [
+      { metric: '5×', label: 'More Qualified Leads' },
+      { metric: '#1', label: 'Local Agent Ranking' },
+      { metric: '3×', label: 'Website Inquiries' },
+      { metric: '4.9★', label: 'Online Reputation' },
+    ],
+    faqs: [
+      {
+        q: 'How do real estate agents get more leads online?',
+        a: 'The most effective combination for agents is Local SEO to rank for area-specific searches, a well-optimised Google Business Profile, targeted Google Ads for motivated buyers and sellers, and a website designed to capture inquiries — not just showcase listings.',
+      },
+      {
+        q: 'How long does it take to see results from real estate SEO?',
+        a: 'Most agents see improved local visibility within 2–3 months and a consistent flow of organic leads by months 4–6. Google Ads can generate leads from day one while SEO builds up.',
+      },
+      {
+        q: 'Is digital marketing worth it for individual real estate agents?',
+        a: 'Absolutely. Even one additional closing per month from digital marketing typically pays for an entire year of agency fees. We help agents build systems that compound — generating more leads with less ad spend over time.',
+      },
+    ],
+    services: [
+      { label: 'Local SEO', href: '/services/local-seo' },
+      { label: 'Lead Generation', href: '/services/lead-generation' },
+      { label: 'Google Ads', href: '/services/google-ads' },
+      { label: 'Website Design', href: '/services/website-design' },
+      { label: 'Social Media Marketing', href: '/services/social-media-marketing' },
+    ],
+  },
 }
 
 export function getIndustryData(slug: string): IndustryData | null {

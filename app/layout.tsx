@@ -19,19 +19,23 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
+    shortcut: '/favicon.png',
   },
   keywords: [
-    'Digital Marketing Agency',
-    'Digital marketing company',
-    'Digital marketing services',
-    'SEO services',
-    'PPC services',
-    'Social Media Marketing',
+    'Digital Marketing Agency India',
+    'Digital Marketing Agency Ludhiana',
+    'SEO Services India',
+    'Google Ads Management India',
+    'Social Media Marketing India',
+    'Website Design India',
     'Content Marketing',
+    'Local SEO India',
     'Digital Expert Hub',
-    'Digital marketing Ludhiana',
+    'Online Marketing Agency India',
   ],
   authors: [{ name: 'Digital Expert Hub', url: siteConfig.url }],
   creator: 'Digital Expert Hub',
@@ -40,13 +44,22 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: 'Digital Marketing Agency in Ludhiana | Digital Expert Hub',
+    title: 'Digital Marketing Agency in India | Digital Expert Hub',
     description: siteConfig.description,
+    images: [
+      {
+        url: '/logo.png',
+        width: 500,
+        height: 200,
+        alt: 'Digital Expert Hub — Digital Marketing Agency India',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Agency | Digital Expert Hub',
+    title: 'Digital Marketing Agency in India | Digital Expert Hub',
     description: siteConfig.description,
+    images: ['/logo.png'],
   },
   robots: {
     index: true,
@@ -84,7 +97,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
         />
       </head>
-      <body className="bg-ink text-paper font-body antialiased">
+      <body className="bg-ink text-paper font-body antialiased grain">
         <a href="#main" className="skip-link">
           Skip to content
         </a>

@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'cro'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Conversion Rate Optimisation (CRO)',
-  description: 'Expert Conversion Rate Optimisation (CRO) from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Conversion Rate Optimisation India',
+  description: 'Increase conversions without increasing ad spend. Expert CRO services — A/B testing, heatmaps, UX analysis & data-driven website optimisation. Free CRO audit.',
   path: '/services/cro',
 })
 

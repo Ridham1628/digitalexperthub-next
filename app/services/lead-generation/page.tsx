@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'lead-generation'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Lead Generation Services',
-  description: 'Expert Lead Generation Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Lead Generation Services India',
+  description: 'Fill your sales pipeline with qualified leads using proven lead generation strategies — SEO, Google Ads, social media & landing page funnels. Free consult.',
   path: '/services/lead-generation',
 })
 

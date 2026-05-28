@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'google-ads'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Google Ads (PPC) Services',
-  description: 'Expert Google Ads (PPC) Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Google Ads Management India',
+  description: 'Get more leads and sales with expert Google Ads management. We optimise Search, Shopping & Display campaigns for maximum ROI with zero wasted spend. Free PPC audit.',
   path: '/services/google-ads',
 })
 

@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'digital-marketing-consulting'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Digital Marketing Consulting',
-  description: 'Expert Digital Marketing Consulting from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Digital Marketing Consulting India',
+  description: 'Expert digital marketing consulting — strategy development, competitor analysis, audits & a clear growth roadmap for your business. Free 30-min consultation.',
   path: '/services/digital-marketing-consulting',
 })
 

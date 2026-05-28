@@ -18,10 +18,12 @@ const staticPages = [
   { url: `${BASE}/locations`, priority: 0.7, changeFrequency: 'monthly' as const },
   { url: `${BASE}/privacy-policy`, priority: 0.3, changeFrequency: 'yearly' as const },
   { url: `${BASE}/terms-and-conditions`, priority: 0.3, changeFrequency: 'yearly' as const },
+  { url: `${BASE}/refund-policy`, priority: 0.3, changeFrequency: 'yearly' as const },
+  { url: `${BASE}/cookie-policy`, priority: 0.3, changeFrequency: 'yearly' as const },
 ]
 
 const servicePages = [
-  'seo', 'local-seo', 'technical-seo', 'ecommerce-seo', 'google-ads',
+  'seo', 'local-seo', 'technical-seo', 'ecommerce-seo', 'ai-seo', 'google-ads',
   'social-media-marketing', 'content-marketing', 'website-design',
   'website-development', 'wordpress-development', 'shopify-development',
   'landing-page-design', 'cro', 'orm', 'email-marketing',
@@ -33,7 +35,7 @@ const servicePages = [
 }))
 
 const industryPages = [
-  'doctors', 'dentists', 'real-estate', 'ecommerce',
+  'doctors', 'dentists', 'real-estate', 'realtors', 'ecommerce',
   'saas', 'law-firms', 'small-business', 'startups',
 ].map((slug) => ({
   url: `${BASE}/industries/${slug}`,

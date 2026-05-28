@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'landing-page-design'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Landing Page Design Services',
-  description: 'Expert Landing Page Design Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Landing Page Design India',
+  description: 'Convert more visitors with high-performance landing pages built to generate leads and sales. A/B tested, conversion-optimised designs. Free quote today.',
   path: '/services/landing-page-design',
 })
 

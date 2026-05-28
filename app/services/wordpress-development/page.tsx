@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'wordpress-development'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'WordPress Development Services',
-  description: 'Expert WordPress Development Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'WordPress Development India',
+  description: 'Build a fast, secure & SEO-ready WordPress website. Custom themes, WooCommerce stores & plugin integration by expert WordPress developers. Quote in 24 hours.',
   path: '/services/wordpress-development',
 })
 

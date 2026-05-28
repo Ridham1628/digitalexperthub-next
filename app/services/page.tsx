@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import CtaSection from '@/components/sections/CtaSection'
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Digital Marketing Services',
-  description: 'Explore our full range of digital marketing services — SEO, PPC, social media, web design, content marketing and more. Proven strategies for business growth.',
+  title: 'Digital Marketing Services India',
+  description: 'Full-service digital marketing — SEO, Google Ads, social media, web design, content marketing, email marketing & more for businesses across India. Free call.',
   path: '/services',
 })
 
@@ -61,6 +62,18 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="pt-28 pb-16 lg:pt-36 lg:pb-20 bg-ink relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none" aria-hidden="true">
+          <div className="relative h-full w-full overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&q=80&auto=format&fit=crop"
+              alt=""
+              fill
+              className="object-cover opacity-30"
+              sizes="33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
+          </div>
+        </div>
         <div className="wrap relative z-10 text-center">
           <p className="section-label mb-4">All Services</p>
           <h1 className="text-display-xl font-display font-bold text-paper mb-6 max-w-3xl mx-auto">

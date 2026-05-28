@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { constructMetadata } from '@/lib/metadata'
 import { articleSchema, breadcrumbSchema } from '@/lib/schema'
@@ -19,6 +20,7 @@ const posts: Record<string, {
   author: string
   tags: string[]
   related: string[]
+  image: string
 }> = {
   'seo-guide-2025': {
     slug: 'seo-guide-2025',
@@ -118,6 +120,7 @@ Need help with your SEO strategy? [Book a free consultation](/contact) with our 
     author: 'Ridham Singh',
     tags: ['SEO', 'Digital Marketing', 'Google', '2025 Guide'],
     related: ['local-seo-guide', 'technical-seo-checklist'],
+    image: 'https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=1200&h=600&q=80&auto=format&fit=crop',
   },
   'google-ads-roi': {
     slug: 'google-ads-roi',
@@ -186,6 +189,7 @@ Google Ads can deliver exceptional ROI when managed correctly. The key is consta
     author: 'Amit Verma',
     tags: ['Google Ads', 'PPC', 'ROI', 'Digital Marketing'],
     related: ['seo-guide-2025', 'local-seo-guide'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&q=80&auto=format&fit=crop',
   },
 }
 
@@ -193,10 +197,11 @@ Google Ads can deliver exceptional ROI when managed correctly. The key is consta
 const defaultPost = (slug: string) => ({
   slug,
   category: 'Digital Marketing',
-  title: `Digital Marketing Guide: ${slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
+  title: `Digital Marketing Guide: ${slug.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}`,
   description: 'Comprehensive guide from Digital Expert Hub on the latest digital marketing strategies.',
   content: `## Introduction\n\nThis is a comprehensive guide on ${slug.replace(/-/g, ' ')}. Our team at Digital Expert Hub covers everything you need to know to succeed with this strategy.\n\n## Key Concepts\n\nDigital marketing is constantly evolving. Stay ahead with data-driven strategies and continuous optimisation.\n\n## Conclusion\n\n[Book a free strategy call](/contact) to discuss how we can help your business grow online.`,
   date: '2025-01-01',
+  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&q=80&auto=format&fit=crop',
   readTime: 8,
   author: 'Digital Expert Hub Team',
   tags: ['Digital Marketing'],
@@ -236,7 +241,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="relative pt-28 pb-12 lg:pt-36 bg-ink overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="wrap relative z-10 max-w-4xl mx-auto">
-          <nav className="flex items-center gap-2 text-xs text-paper/40 font-display mb-8">
+          <nav className="flex items-center gap-2 text-xs text-paper/65 font-display mb-8">
             <Link href="/" className="hover:text-lime">Home</Link>
             <span>/</span>
             <Link href="/blog" className="hover:text-lime">Blog</Link>
@@ -247,7 +252,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.category}
           </span>
           <h1 className="text-display-lg font-display font-bold text-paper mb-6 leading-tight">{post.title}</h1>
-          <div className="flex items-center gap-4 text-sm text-paper/50">
+          <div className="flex items-center gap-4 text-sm text-paper/65">
             <span>By {post.author}</span>
             <span>·</span>
             <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
@@ -256,6 +261,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </section>
+
+      {/* Featured image */}
+      <div className="bg-ink">
+        <div className="wrap pb-0 pt-0">
+          <div className="relative rounded-3xl overflow-hidden aspect-[21/9] -mt-4">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent" />
+          </div>
+        </div>
+      </div>
 
       {/* Content */}
       <article className="section bg-paper">
@@ -283,12 +305,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {/* Author */}
               <div className="bg-paper-2 rounded-3xl p-6 border border-ink/8">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 rounded-xl bg-ink text-lime flex items-center justify-center font-display font-bold">
-                    {post.author.split(' ').map(n => n[0]).join('').slice(0,2)}
+                  <div className="w-12 h-12 rounded-xl overflow-hidden relative shrink-0">
+                    <Image
+                      src="https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?w=96&h=96&q=80&auto=format&fit=crop&crop=face"
+                      alt={post.author}
+                      fill
+                      className="object-cover"
+                      sizes="48px"
+                    />
                   </div>
                   <div>
                     <p className="font-display font-bold text-ink text-sm">{post.author}</p>
-                    <p className="text-xs text-ink/50">Digital Marketing Expert</p>
+                    <p className="text-xs text-ink/65">Digital Marketing Expert</p>
                   </div>
                 </div>
                 <p className="text-xs text-ink/60 leading-relaxed">7+ years of experience helping businesses grow online with proven digital marketing strategies.</p>

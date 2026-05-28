@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Expert Hub — Instagram Post 1080×1080</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; overflow: hidden; }
+
+  .post {
+    width: 1080px;
+    height: 1080px;
+    background: #0b0f0c;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px;
+  }
+
+  /* Grid */
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,242,80,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,242,80,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Big lime number background */
+  .bg-number {
+    position: absolute;
+    font-size: 500px;
+    font-weight: 800;
+    color: rgba(200,242,80,0.04);
+    right: -60px;
+    bottom: -80px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    user-select: none;
+  }
+
+  /* Glow */
+  .glow-tl {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(200,242,80,0.1) 0%, transparent 70%);
+    left: -100px;
+    top: -100px;
+    border-radius: 50%;
+  }
+
+  .glow-br {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(26,46,31,0.8) 0%, transparent 70%);
+    right: -80px;
+    bottom: -80px;
+    border-radius: 50%;
+  }
+
+  /* Top row */
+  .top {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(200,242,80,0.12);
+    border: 1px solid rgba(200,242,80,0.3);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c8f250;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Middle */
+  .middle {
+    position: relative;
+    z-index: 10;
+  }
+
+  .eyebrow {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(243,240,232,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #c8f250;
+  }
+
+  h1 {
+    font-size: 76px;
+    font-weight: 800;
+    color: #f3f0e8;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+  }
+
+  h1 .italic {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #c8f250;
+  }
+
+  .desc {
+    margin-top: 28px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    color: rgba(243,240,232,0.6);
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  /* Stats row */
+  .stats-row {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(243,240,232,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .stat {
+    background: rgba(11,15,12,0.95);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .stat-n {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    color: #c8f250;
+    line-height: 1;
+  }
+
+  .stat-l {
+    display: block;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(243,240,232,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+  }
+
+  /* Bottom */
+  .bottom {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: #c8f250;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b0f0c;
+  }
+
+  .url {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 13px;
+    color: rgba(243,240,232,0.4);
+  }
+
+  .services-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .svc {
+    padding: 6px 12px;
+    background: rgba(26,46,31,0.6);
+    border: 1px solid rgba(200,242,80,0.15);
+    border-radius: 8px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(243,240,232,0.65);
+  }
+
+  /* Border */
+  .border-frame {
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(243,240,232,0.05);
+    border-radius: 28px;
+    pointer-events: none;
+    z-index: 5;
+  }
+</style>
+</head>
+<body>
+<div class="post">
+  <div class="grid-bg"></div>
+  <div class="bg-number">D</div>
+  <div class="glow-tl"></div>
+  <div class="glow-br"></div>
+  <div class="border-frame"></div>
+
+  <!-- Top -->
+  <div class="top">
+    <div class="logo">
+      <img src="../public/logo.png" alt="Digital Expert Hub">
+    </div>
+    <div class="badge">Digital Marketing</div>
+  </div>
+
+  <!-- Middle -->
+  <div class="middle">
+    <div class="eyebrow">India's Trusted Agency</div>
+    <h1>Rank Higher.<br>Grow <span class="italic">Faster.</span><br>Scale Smarter.</h1>
+    <p class="desc">We help businesses across India dominate search, attract quality leads and build powerful online brands.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-n">1,000+</span>
+      <span class="stat-l">Clients Served</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">7+</span>
+      <span class="stat-l">Years Expert</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">₹3Cr+</span>
+      <span class="stat-l">Ad Spend</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n">4.9★</span>
+      <span class="stat-l">Avg Rating</span>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="bottom">
+    <div class="cta-group">
+      <div class="cta-btn">Free Strategy Call →</div>
+      <span class="url">digitalexperthub.com</span>
+    </div>
+    <div class="services-row">
+      <span class="svc">SEO</span>
+      <span class="svc">Google Ads</span>
+      <span class="svc">Social Media</span>
+      <span class="svc">Web Design</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

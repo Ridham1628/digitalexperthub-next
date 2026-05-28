@@ -27,10 +27,11 @@ export function organizationSchema() {
       reviewCount: '40',
     },
     sameAs: [
-      'https://www.facebook.com/digitalexperthub',
-      'https://www.instagram.com/digitalexperthub',
-      'https://www.linkedin.com/company/digitalexperthub',
-      'https://twitter.com/digitalexperthub',
+      'https://www.facebook.com/digitalexperthub/',
+      'https://www.instagram.com/digital_experthub/',
+      'https://linkedin.com/company/digital-expert-hub-0/',
+      'https://x.com/expert64164',
+      'https://www.youtube.com/@digitalexperthub0',
     ],
   }
 }

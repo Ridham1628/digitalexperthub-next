@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'email-marketing'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Email Marketing Services',
-  description: 'Expert Email Marketing Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Email Marketing Services India',
+  description: 'Nurture leads and drive repeat sales with email marketing services. Campaign design, automation sequences, segmentation & analytics. Free email audit today.',
   path: '/services/email-marketing',
 })
 

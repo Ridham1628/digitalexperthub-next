@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'shopify-development'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Shopify Development Services',
-  description: 'Expert Shopify Development Services from Digital Expert Hub. Data-driven strategies that deliver measurable results for your business.',
+  title: 'Shopify Development Services India',
+  description: 'Launch or upgrade your Shopify store with expert Shopify development. Custom themes, app integration & Shopify SEO built in. Free Shopify consultation today.',
   path: '/services/shopify-development',
 })
 

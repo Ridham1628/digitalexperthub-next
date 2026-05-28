@@ -25,7 +25,9 @@ export default function NotFound() {
             404
           </span>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-6xl">🔍</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-20 h-20 text-lime/30">
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
           </div>
         </div>
 
@@ -48,7 +50,7 @@ export default function NotFound() {
 
         {/* Quick links */}
         <div className="border-t border-white/10 pt-8">
-          <p className="text-xs font-display font-bold uppercase tracking-[0.2em] text-paper/40 mb-5">
+          <p className="text-xs font-display font-bold uppercase tracking-[0.2em] text-paper/60 mb-5">
             You might be looking for
           </p>
           <div className="flex flex-wrap justify-center gap-2">

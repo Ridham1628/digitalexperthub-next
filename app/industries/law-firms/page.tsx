@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation'
 const SLUG = 'law-firms'
 
 export const metadata: Metadata = constructMetadata({
-  title: 'SEO for Law Firms',
-  description: 'Industry-specific digital marketing for law-firms — SEO, Google Ads, lead generation and more. Proven strategies from Digital Expert Hub.',
+  title: 'Digital Marketing for Law Firms India',
+  description: 'Generate high-quality client enquiries with digital marketing for law firms in India. SEO, Google Ads & content marketing for legal practices. Free consultation.',
   path: '/industries/law-firms',
 })
 

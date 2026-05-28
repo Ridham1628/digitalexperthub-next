@@ -8,7 +8,7 @@ const SLUG = 'small-business'
 
 export const metadata: Metadata = constructMetadata({
   title: 'Digital Marketing for Small Business',
-  description: 'Industry-specific digital marketing for small-business — SEO, Google Ads, lead generation and more. Proven strategies from Digital Expert Hub.',
+  description: 'Compete and win online with digital marketing for small businesses. Affordable SEO, Google Ads & social media packages with results that scale. Free call.',
   path: '/industries/small-business',
 })
 
