@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 62" fill="none">
+  <rect width="56" height="62" rx="12" fill="#0b0f0c"/>
+  <!-- D outline -->
+  <path d="M 7,4 L 7,58 L 22,58 A 27,27 0 0 0 22,4 Z"
+    stroke="#c8f250" stroke-width="7"
+    stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+  <!-- Row 1: 1 pad + bar -->
+  <rect x="15" y="16" width="8" height="8" rx="1.5" fill="#c8f250"/>
+  <rect x="25" y="18.5" width="15" height="3" rx="1" fill="#c8f250"/>
+  <!-- Row 2: 2 pads + bar -->
+  <rect x="15" y="27" width="8" height="8" rx="1.5" fill="#c8f250"/>
+  <rect x="25" y="27" width="8" height="8" rx="1.5" fill="#c8f250"/>
+  <rect x="35" y="29.5" width="10" height="3" rx="1" fill="#c8f250"/>
+  <!-- Row 3: 3 pads -->
+  <rect x="15" y="38" width="8" height="8" rx="1.5" fill="#c8f250"/>
+  <rect x="25" y="38" width="8" height="8" rx="1.5" fill="#c8f250"/>
+  <rect x="35" y="38" width="8" height="8" rx="1.5" fill="#c8f250"/>
+</svg>

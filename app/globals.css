@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-bricolage: 'Bricolage Grotesque', sans-serif;
+    --font-fraunces: 'Fraunces', serif;
+    --font-hanken: 'Hanken Grotesk', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-ink text-paper font-body;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: #c8f250;
+    color: #0b0f0c;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 lg:py-28;
+  }
+
+  .section-sm {
+    @apply py-14 lg:py-20;
+  }
+
+  /* Grain overlay */
+  .grain::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-sm transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-lime {
+    @apply bg-lime text-ink hover:bg-lime-deep hover:shadow-lime hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-ghost-dark {
+    @apply border border-white/20 text-paper hover:border-white/40 hover:bg-white/5;
+  }
+
+  .btn-ghost-light {
+    @apply border border-ink/20 text-ink hover:border-ink/40 hover:bg-ink/5;
+  }
+
+  .btn-ink {
+    @apply bg-ink text-paper hover:bg-ink-light hover:shadow-card-hover hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-paper-2 rounded-3xl p-8 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .card-dark {
+    @apply bg-forest/60 border border-white/10 rounded-3xl p-8 transition-all duration-300 hover:bg-forest hover:border-white/20 hover:-translate-y-1;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-display font-semibold uppercase tracking-wider;
+  }
+
+  .badge-lime {
+    @apply bg-lime/15 text-lime-deep border border-lime/20;
+  }
+
+  .badge-light {
+    @apply bg-paper/10 text-paper/70 border border-white/10;
+  }
+
+  /* Section Label */
+  .section-label {
+    @apply text-xs font-display font-bold uppercase tracking-[0.2em] text-lime;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-lime to-lime-deep bg-clip-text text-transparent;
+  }
+
+  /* Serif italic highlight */
+  .serif-it {
+    font-family: var(--font-fraunces);
+    font-style: italic;
+    @apply text-lime;
+  }
+
+  /* Grid patterns */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply border-t border-white/10;
+  }
+
+  .divider-light {
+    @apply border-t border-ink/10;
+  }
+
+  /* Focus */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-lime focus:ring-offset-2 focus:ring-offset-ink;
+  }
+
+  /* Animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Scroll progress bar */
+  #scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #c8f250;
+    z-index: 9999;
+    transition: width 0.1s linear;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a2e1f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8f250;
+}
+
+/* Skip link */
+.skip-link {
+  @apply absolute -top-full left-4 z-50 bg-lime text-ink px-4 py-2 rounded-full text-sm font-semibold;
+}
+
+.skip-link:focus {
+  @apply top-4;
+}
+
+/* Prose overrides for blog */
+.prose-brand h1,
+.prose-brand h2,
+.prose-brand h3 {
+  @apply font-display;
+}
+
+.prose-brand a {
+  @apply text-lime no-underline hover:underline;
+}
+
+.prose-brand code {
+  @apply bg-white/10 text-lime px-1.5 py-0.5 rounded text-sm;
+}
+
+.prose-brand blockquote {
+  @apply border-l-4 border-lime pl-6 text-paper/80;
+}

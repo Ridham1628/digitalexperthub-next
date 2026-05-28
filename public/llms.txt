@@ -1,0 +1,58 @@
+# Digital Expert Hub — LLM Context File
+# https://digitalexperthub.com
+
+## About
+
+Digital Expert Hub is a results-driven digital marketing agency based in Ludhiana, Punjab, India.
+We help businesses of all sizes build, grow and scale their online presence through proven SEO,
+PPC, social media, content marketing, web design and development services.
+
+## Contact
+
+- Website: https://digitalexperthub.com
+- Phone: +91-7986713605
+- Email: info@digitalexperthub.com
+- Address: House No. 785, Street No. 7, Master Colony, Santokh Nagar, Shivpuri, Ludhiana, Punjab 141008, India
+
+## Services
+
+- SEO Services: /services/seo
+- Local SEO: /services/local-seo
+- Technical SEO: /services/technical-seo
+- E-commerce SEO: /services/ecommerce-seo
+- Google Ads / PPC: /services/google-ads
+- Social Media Marketing: /services/social-media-marketing
+- Content Marketing: /services/content-marketing
+- Website Design: /services/website-design
+- Website Development: /services/website-development
+- WordPress Development: /services/wordpress-development
+- Shopify Development: /services/shopify-development
+- Landing Page Design: /services/landing-page-design
+- CRO: /services/cro
+- ORM: /services/orm
+- Email Marketing: /services/email-marketing
+- Lead Generation: /services/lead-generation
+- Branding: /services/branding
+- Digital Marketing Consulting: /services/digital-marketing-consulting
+
+## Industries Served
+
+- Doctors & Medical Clinics: /industries/doctors
+- Dentists: /industries/dentists
+- Real Estate: /industries/real-estate
+- E-commerce: /industries/ecommerce
+- SaaS & Tech: /industries/saas
+- Law Firms: /industries/law-firms
+- Small Businesses: /industries/small-business
+- Startups: /industries/startups
+
+## Key Stats
+
+- 7+ years in business
+- 1,000+ brands served
+- ₹3Cr+ ad spend managed
+- Rated 4.9/5 from 40+ reviews
+
+## Sitemap
+
+Full sitemap available at: https://digitalexperthub.com/sitemap.xml

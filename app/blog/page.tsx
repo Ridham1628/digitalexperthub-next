@@ -1,0 +1,143 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { constructMetadata } from '@/lib/metadata'
+import CtaSection from '@/components/sections/CtaSection'
+
+export const metadata: Metadata = constructMetadata({
+  title: 'Blog — Digital Marketing Insights & SEO Tips',
+  description: 'Read expert digital marketing tips, SEO guides, Google Ads strategies and content marketing insights from the Digital Expert Hub team.',
+  path: '/blog',
+})
+
+const categories = ['All', 'SEO', 'Google Ads', 'Social Media', 'Content Marketing', 'Technical SEO', 'Web Design', 'Email Marketing']
+
+const posts = [
+  { slug: 'seo-guide-2025', category: 'SEO', title: 'The Complete SEO Guide for 2025: How to Rank #1 on Google', excerpt: 'Everything you need to know about modern SEO — technical foundations, keyword research, link building and content strategy that works in 2025.', date: '2025-01-15', readTime: 12, featured: true },
+  { slug: 'google-ads-roi', category: 'Google Ads', title: 'How to Maximise Google Ads ROI: 10 Proven Strategies', excerpt: 'Stop burning money on Google Ads. These 10 strategies will help you get more leads and sales for less spend.', date: '2025-01-08', readTime: 8, featured: false },
+  { slug: 'local-seo-guide', category: 'SEO', title: 'Local SEO in 2025: The Complete Guide to Dominating Your City', excerpt: 'A step-by-step local SEO guide for businesses that want to outrank competitors in local search and Google Maps.', date: '2024-12-20', readTime: 10, featured: false },
+  { slug: 'content-marketing-strategy', category: 'Content Marketing', title: 'Content Marketing Strategy: How to Build an Organic Traffic Machine', excerpt: 'The exact content marketing framework we use to drive 10x organic traffic growth for our clients in 12 months.', date: '2024-12-10', readTime: 15, featured: false },
+  { slug: 'technical-seo-checklist', category: 'Technical SEO', title: 'Technical SEO Checklist 2025: 50 Must-Fix Issues', excerpt: 'A comprehensive technical SEO checklist covering Core Web Vitals, crawlability, indexation and schema markup.', date: '2024-11-28', readTime: 20, featured: false },
+  { slug: 'social-media-marketing-tips', category: 'Social Media', title: 'Social Media Marketing in 2025: What Actually Works', excerpt: 'Cut through the noise. These social media marketing strategies are generating real results for businesses right now.', date: '2024-11-15', readTime: 9, featured: false },
+  { slug: 'email-marketing-automation', category: 'Email Marketing', title: 'Email Marketing Automation: 7 Sequences Every Business Needs', excerpt: 'The 7 email automation sequences that drive the most revenue — and exactly how to build each one.', date: '2024-11-05', readTime: 11, featured: false },
+  { slug: 'shopify-seo-guide', category: 'SEO', title: 'Shopify SEO Guide: How to Rank Your Store on Google', excerpt: 'The complete guide to Shopify SEO — from technical setup to product page optimisation and link building.', date: '2024-10-22', readTime: 14, featured: false },
+  { slug: 'website-design-conversion', category: 'Web Design', title: 'Website Design for Conversions: 15 Principles That Actually Work', excerpt: 'Design your website to convert, not just impress. These 15 CRO-backed design principles will increase your leads.', date: '2024-10-10', readTime: 10, featured: false },
+]
+
+export default function BlogPage() {
+  const featured = posts.find((p) => p.featured)
+  const rest = posts.filter((p) => !p.featured)
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 bg-ink overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="wrap relative z-10 text-center">
+          <p className="section-label mb-4">The Blog</p>
+          <h1 className="text-display-xl font-display font-bold text-paper mb-6 max-w-3xl mx-auto">
+            Digital Marketing Insights &amp;{' '}
+            <span className="font-serif italic text-lime">Actionable Strategies</span>
+          </h1>
+          <p className="text-lg text-paper/65 max-w-2xl mx-auto leading-relaxed">
+            Expert guides, proven strategies and industry insights from our team of digital marketing specialists.
+          </p>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-6 bg-paper border-b border-ink/10">
+        <div className="wrap">
+          <div className="flex flex-wrap gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`px-4 py-2 rounded-full text-xs font-display font-semibold uppercase tracking-wider transition-colors ${
+                  cat === 'All'
+                    ? 'bg-ink text-paper'
+                    : 'bg-paper-2 text-ink/70 hover:bg-ink hover:text-paper border border-ink/10'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-paper">
+        <div className="wrap">
+          {/* Featured Post */}
+          {featured && (
+            <div className="mb-12">
+              <Link
+                href={`/blog/${featured.slug}`}
+                className="group grid lg:grid-cols-2 gap-0 bg-ink rounded-4xl overflow-hidden hover:shadow-card-hover transition-shadow"
+              >
+                <div className="h-72 lg:h-auto bg-gradient-to-br from-forest to-ink relative">
+                  <div className="absolute inset-0 grid-bg opacity-20" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-8xl opacity-20">✍️</span>
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-3 py-1 bg-lime text-ink rounded-full text-xs font-display font-bold">
+                      Featured · {featured.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <h2 className="text-2xl lg:text-3xl font-display font-bold text-paper mb-4 group-hover:text-lime transition-colors leading-snug">
+                    {featured.title}
+                  </h2>
+                  <p className="text-paper/65 leading-relaxed mb-6">{featured.excerpt}</p>
+                  <div className="flex items-center justify-between text-sm text-paper/40">
+                    <span>{new Date(featured.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                    <span>{featured.readTime} min read</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
+
+          {/* All Posts */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {rest.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col bg-paper-2 rounded-3xl overflow-hidden border border-ink/6 hover:border-lime/30 hover:shadow-card hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="h-44 bg-gradient-to-br from-ink to-forest relative overflow-hidden">
+                  <div className="absolute inset-0 grid-bg opacity-20" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-3 py-1 bg-lime text-ink rounded-full text-xs font-display font-bold uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h2 className="font-display font-bold text-ink text-base leading-snug mb-3 group-hover:text-lime-deep transition-colors line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-ink/60 leading-relaxed flex-1 line-clamp-2">{post.excerpt}</p>
+                  <div className="flex items-center justify-between mt-4 pt-4 border-t border-ink/8 text-xs text-ink/40">
+                    <span>{new Date(post.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                    <span>{post.readTime} min read</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaSection
+        title="Want digital marketing tips in your inbox?"
+        subtitle="Subscribe to our newsletter and get actionable SEO, PPC and content marketing insights every week."
+        primaryLabel="Subscribe Free"
+        primaryHref="/contact"
+        secondaryLabel="View All Topics"
+        secondaryHref="/blog"
+      />
+    </>
+  )
+}
