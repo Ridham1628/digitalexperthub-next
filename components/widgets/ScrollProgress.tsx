@@ -17,8 +17,8 @@ export default function ScrollProgress() {
   return (
     <div
       id="scroll-progress"
-      style={{ width: `${progress}%`, boxShadow: '0 0 8px rgba(200,242,80,0.6), 0 0 2px rgba(200,242,80,0.8)' }}
-      className="fixed top-0 left-0 h-[2px] bg-lime z-[9999] transition-[width] duration-100"
+      style={{ width: `${progress}%` }}
+      className="fixed top-0 left-0 h-0.5 bg-lime z-[9999] transition-[width] duration-100"
       aria-hidden="true"
     />
   )
