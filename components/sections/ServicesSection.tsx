@@ -142,7 +142,7 @@ export default function ServicesSection() {
           <motion.div variants={item}>
             <Link
               href={featured.href}
-              className="group flex flex-col md:flex-row md:items-center bg-forest/40 border border-white/10 rounded-3xl overflow-hidden hover:border-lime/35 hover:shadow-[0_8px_48px_rgba(200,242,80,0.1)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              className="group flex flex-col md:flex-row md:items-center bg-forest/40 border border-white/10 rounded-3xl overflow-hidden hover:border-lime/40 hover:shadow-[0_8px_48px_rgba(200,242,80,0.12),0_0_0_1px_rgba(200,242,80,0.15)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               {/* Visual left side */}
               <div className={`md:w-72 lg:w-96 shrink-0 h-48 md:h-full md:min-h-[200px] bg-gradient-to-br ${featured.gradient} relative flex items-center justify-center`}>
@@ -196,7 +196,7 @@ export default function ServicesSection() {
               <motion.div key={s.href} variants={item}>
                 <Link
                   href={s.href}
-                  className="group flex flex-col h-full bg-forest/30 border border-white/10 rounded-3xl p-7 hover:border-white/25 hover:bg-forest/50 hover:shadow-[0_4px_24px_rgba(0,0,0,0.3)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                  className="group flex flex-col h-full bg-forest/30 border border-white/10 rounded-3xl p-7 hover:border-white/20 hover:bg-forest/50 hover:shadow-[0_4px_32px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.06)] hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
                 >
                   {/* Icon + number */}
                   <div className="flex items-start justify-between mb-5">

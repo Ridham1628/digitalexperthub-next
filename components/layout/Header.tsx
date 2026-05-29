@@ -161,7 +161,7 @@ export default function Header() {
               </a>
               <Link
                 href="/contact"
-                className="btn btn-lime btn-sm px-5 py-2.5 text-sm"
+                className="btn btn-lime px-5 py-2.5 text-sm glow-cta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 Free Strategy Call
               </Link>

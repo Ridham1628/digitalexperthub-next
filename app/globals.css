@@ -242,9 +242,75 @@
   }
 }
 
+/* ── Extra animations ── */
+@layer components {
+  /* Shimmer effect for loading / decorative elements */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(200,242,80,0.08) 50%, transparent 100%);
+    background-size: 200% auto;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  /* Pulsing lime glow ring — use on key CTA elements */
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200,242,80,0); }
+    50% { box-shadow: 0 0 0 6px rgba(200,242,80,0.12), 0 0 24px rgba(200,242,80,0.08); }
+  }
+
+  .glow-cta {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Lime text glow */
+  .text-glow {
+    text-shadow: 0 0 24px rgba(200,242,80,0.5), 0 0 48px rgba(200,242,80,0.2);
+  }
+
+  /* Card hover lime glow border */
+  .card-glow {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px rgba(200,242,80,0.25), 0 8px 40px rgba(200,242,80,0.07);
+    border-color: rgba(200,242,80,0.3) !important;
+  }
+
+  /* Subtle float animation for dashboard card */
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .float {
+    animation: float-y 4s ease-in-out infinite;
+  }
+
+  /* Diagonal stripe background pattern */
+  .stripe-bg {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.015) 10px,
+      rgba(255,255,255,0.015) 11px
+    );
+  }
+
+  /* Section divider with lime center glow */
+  .divider-glow {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(200,242,80,0.25) 50%, transparent 100%);
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -252,7 +318,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a2e1f;
+  background: rgba(26,46,31,0.8);
   border-radius: 3px;
 }
 

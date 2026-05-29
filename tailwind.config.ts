@@ -50,10 +50,13 @@ const config: Config = {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        'soft': '0 4px 32px rgba(0,0,0,0.06)',
-        'card': '0 2px 16px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06)',
-        'card-hover': '0 8px 40px rgba(0,0,0,0.12)',
-        'lime': '0 0 0 1px #c8f250, 0 8px 32px rgba(200,242,80,0.2)',
+        'soft':           '0 4px 32px rgba(0,0,0,0.06)',
+        'card':           '0 2px 16px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06)',
+        'card-hover':     '0 8px 40px rgba(0,0,0,0.12)',
+        'lime':           '0 0 0 1px #c8f250, 0 8px 32px rgba(200,242,80,0.2)',
+        'lime-glow':      '0 0 24px rgba(200,242,80,0.18), 0 0 48px rgba(200,242,80,0.08)',
+        'lime-glow-sm':   '0 0 12px rgba(200,242,80,0.15)',
+        'dark-elevated':  '0 8px 40px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.2)',
       },
       animation: {
         'marquee': 'marquee 40s linear infinite',

@@ -57,10 +57,12 @@ export default function MarqueeSection() {
       </div>
 
       {/* Center label */}
-      <div className="text-center py-2.5 bg-forest/20" aria-hidden="true">
+      <div className="relative text-center py-2.5 bg-forest/20 overflow-hidden" aria-hidden="true">
+        <div className="divider-glow absolute top-0 left-0 right-0 opacity-40" />
         <span className="text-[10px] font-display font-bold uppercase tracking-[0.3em] text-paper/30">
           Trusted Tools &amp; Client Wins
         </span>
+        <div className="divider-glow absolute bottom-0 left-0 right-0 opacity-40" />
       </div>
 
       {/* Track 2 — Client wins — right to left */}

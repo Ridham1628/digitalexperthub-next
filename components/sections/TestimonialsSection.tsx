@@ -106,10 +106,10 @@ export default function TestimonialsSection() {
               transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
               className={[
-                'relative rounded-3xl p-6 sm:p-8 overflow-hidden',
+                'relative rounded-3xl p-6 sm:p-8 overflow-hidden transition-all duration-300',
                 t.featured
-                  ? 'sm:col-span-2 lg:col-span-2 bg-lime text-ink'
-                  : 'bg-forest/40 border border-white/10 text-paper',
+                  ? 'sm:col-span-2 lg:col-span-2 bg-lime text-ink hover:shadow-[0_12px_48px_rgba(200,242,80,0.2)]'
+                  : 'bg-forest/40 border border-white/10 text-paper hover:border-white/20 hover:bg-forest/55 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)]',
               ].join(' ')}
             >
               {/* Decorative oversized quote mark */}

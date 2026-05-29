@@ -65,6 +65,10 @@ export default function ProcessSection() {
         </div>
 
         {/* Desktop: horizontal 5-col (lg+) */}
+        {/* Connecting progress line behind cards */}
+        <div className="hidden lg:block relative mb-4" aria-hidden="true">
+          <div className="absolute top-1/2 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2" />
+        </div>
         <div className="hidden lg:grid lg:grid-cols-5 gap-4 xl:gap-6">
           {steps.map((s, i) => (
             <motion.div
@@ -73,18 +77,19 @@ export default function ProcessSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className={`relative bg-gradient-to-b ${s.gradient} border border-white/10 rounded-3xl p-6 flex flex-col`}
+              className={`relative bg-gradient-to-b ${s.gradient} border border-white/10 rounded-3xl p-6 flex flex-col hover:border-white/20 hover:-translate-y-1 transition-all duration-300`}
             >
-              <span className={`text-4xl font-display font-bold ${s.color} opacity-30 mb-4 block`}>
+              {/* Step number — large ghost */}
+              <span className={`text-4xl font-display font-bold ${s.color} opacity-25 mb-4 block select-none`}>
                 {s.number}
               </span>
               <h3 className={`text-base font-display font-bold ${s.color} mb-2`}>{s.title}</h3>
               <p className="text-xs text-paper/65 leading-relaxed">{s.desc}</p>
 
-              {/* Connector arrow */}
+              {/* Connector chevron */}
               {i < steps.length - 1 && (
-                <div className="absolute -right-3 top-1/2 -translate-y-1/2 z-10" aria-hidden="true">
-                  <svg className="w-5 h-5 text-white/20" viewBox="0 0 16 16" fill="currentColor">
+                <div className="absolute -right-3 top-8 z-10" aria-hidden="true">
+                  <svg className="w-5 h-5 text-white/15" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0l8 8-8 8V0z" />
                   </svg>
                 </div>
