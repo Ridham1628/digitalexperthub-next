@@ -116,16 +116,16 @@ export default function ContactFormSection() {
                 onChange={(e) => setForm({ ...form, service: e.target.value })}
                 className={`${inputBase} appearance-none cursor-pointer`}
               >
-                <option value="">Select a service…</option>
-                <option value="seo">SEO Services</option>
-                <option value="ppc">Google Ads / PPC</option>
-                <option value="social">Social Media Marketing</option>
-                <option value="web-design">Website Design</option>
-                <option value="web-dev">Website Development</option>
-                <option value="content">Content Marketing</option>
-                <option value="email">Email Marketing</option>
-                <option value="branding">Branding</option>
-                <option value="other">Other / Not Sure</option>
+                <option value="" className="bg-ink text-paper">Select a service…</option>
+                <option value="seo" className="bg-ink text-paper">SEO Services</option>
+                <option value="ppc" className="bg-ink text-paper">Google Ads / PPC</option>
+                <option value="social" className="bg-ink text-paper">Social Media Marketing</option>
+                <option value="web-design" className="bg-ink text-paper">Website Design</option>
+                <option value="web-dev" className="bg-ink text-paper">Website Development</option>
+                <option value="content" className="bg-ink text-paper">Content Marketing</option>
+                <option value="email" className="bg-ink text-paper">Email Marketing</option>
+                <option value="branding" className="bg-ink text-paper">Branding</option>
+                <option value="other" className="bg-ink text-paper">Other / Not Sure</option>
               </select>
             </div>
           </div>
