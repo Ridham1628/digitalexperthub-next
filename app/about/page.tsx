@@ -11,12 +11,12 @@ export const metadata: Metadata = constructMetadata({
 })
 
 const team = [
-  { name: 'Ridham Singh', role: 'Founder & CEO', expertise: 'SEO & Growth Strategy', avatar: 'RS', photo: 'https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
-  { name: 'Priya Kapoor', role: 'Head of SEO', expertise: 'Technical & On-Page SEO', avatar: 'PK', photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
-  { name: 'Amit Verma', role: 'PPC Lead', expertise: 'Google Ads & Meta Ads', avatar: 'AV', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
-  { name: 'Sneha Gupta', role: 'Content Strategist', expertise: 'Content & Copywriting', avatar: 'SG', photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
-  { name: 'Rahul Sharma', role: 'Web Developer', expertise: 'React & WordPress', avatar: 'RS', photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
-  { name: 'Deepak Nair', role: 'Design Lead', expertise: 'UI/UX & Branding', avatar: 'DN', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&q=80&auto=format&fit=crop&crop=face' },
+  { name: 'Ridham', role: 'Co-Founder & CEO', expertise: 'SEO & Growth Strategy', avatar: 'R', photo: '/Ridham.png' },
+  { name: 'Sumandeep', role: 'Co-Founder & CTO', expertise: 'Tech & Product', avatar: 'S', photo: '/Sumandeep.png' },
+  { name: 'Pooja', role: 'Head of Operations', expertise: 'Operations & Delivery', avatar: 'P', photo: '/Pooja.png' },
+  { name: 'Chetna', role: 'Head of Legal & Compliance', expertise: 'Legal & Compliance', avatar: 'C', photo: '/Chetna.png' },
+  { name: 'Praveen', role: 'Director of Customer Experience', expertise: 'Client Success', avatar: 'Pr', photo: '/Praveen.png' },
+  { name: 'Kartik', role: 'Marketing Lead', expertise: 'Digital Marketing', avatar: 'K', photo: '/Kartik.png' },
 ]
 
 /* SVG icons for values */
