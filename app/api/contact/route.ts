@@ -119,7 +119,7 @@ export async function POST(request: Request) {
               </div>
               <p>In the meantime, feel free to explore our <a href="https://digitalexperthub.com/case-studies" style="color:#c8f250">case studies</a> or read our <a href="https://digitalexperthub.com/blog" style="color:#c8f250">blog</a> for free digital marketing insights.</p>
               <a href="https://digitalexperthub.com/contact" class="cta">View Our Services →</a>
-              <p style="font-size:13px">Questions? Reply to this email or call us at <a href="tel:+917986713605" style="color:#c8f250">+91 79867 13605</a></p>
+              <p style="font-size:13px">Questions? Reply to this email or call us at <a href="tel:+917986605418" style="color:#c8f250">+91 79866 05418</a></p>
             </div>
             <div class="footer">
               Digital Expert Hub · Ludhiana, Punjab, India<br>

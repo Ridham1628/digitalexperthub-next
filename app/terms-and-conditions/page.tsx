@@ -54,7 +54,7 @@ export default function TermsPage() {
             },
             {
               title: '10. Contact',
-              content: 'For questions about these Terms, contact us at info@digitalexperthub.com or +91 79867 13605.',
+              content: 'For questions about these Terms, contact us at info@digitalexperthub.com or +91 79866 05418.',
             },
           ].map((section) => (
             <div key={section.title}>

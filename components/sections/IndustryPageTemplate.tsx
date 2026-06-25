@@ -119,11 +119,11 @@ export default function IndustryPageTemplate({
                 </svg>
               </Link>
               <a
-                href="tel:+917986713605"
+                href="tel:+917986605418"
                 className="btn btn-ghost-dark btn-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               >
                 <PhoneIcon />
-                +91 79867 13605
+                +91 79866 05418
               </a>
             </div>
           </div>

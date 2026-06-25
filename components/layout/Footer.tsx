@@ -125,13 +125,13 @@ export default function Footer() {
               Book Free Call →
             </Link>
             <a
-              href="tel:+917986713605"
+              href="tel:+917986605418"
               className="flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-ink text-ink rounded-full font-display font-bold text-sm hover:bg-ink/10 transition-colors min-h-[44px]"
             >
               <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              +91 79867 13605
+              +91 79866 05418
             </a>
           </div>
         </div>
@@ -148,11 +148,11 @@ export default function Footer() {
               proven SEO, PPC, web design and content marketing strategies.
             </p>
             <div className="space-y-2 text-sm text-paper/60">
-              <a href="tel:+917986713605" className="flex items-center gap-2 hover:text-lime transition-colors">
+              <a href="tel:+917986605418" className="flex items-center gap-2 hover:text-lime transition-colors">
                 <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                +91 79867 13605
+                +91 79866 05418
               </a>
               <a href="mailto:info@digitalexperthub.com" className="flex items-center gap-2 hover:text-lime transition-colors">
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -5,7 +5,7 @@ const siteConfig = {
   url: 'https://digitalexperthub.com',
   description:
     'Results-driven digital marketing agency in India — SEO, Google Ads, social media & web design. Trusted by 1,000+ brands. 7+ years. Free strategy call.',
-  phone: '+91-7986713605',
+  phone: '+91-7986605418',
   email: 'info@digitalexperthub.com',
   address: 'House No. 785, Street No. 7, Master Colony, Santokh Nagar, Shivpuri, Ludhiana, Punjab 141008',
 }

@@ -147,7 +147,7 @@ export default function ContactFormSection() {
           {status === 'error' && (
             <p role="alert" className="text-red-400 text-sm bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3">
               Something went wrong. Please try again or{' '}
-              <a href="tel:+917986713605" className="underline">call us directly</a>.
+              <a href="tel:+917986605418" className="underline">call us directly</a>.
             </p>
           )}
 

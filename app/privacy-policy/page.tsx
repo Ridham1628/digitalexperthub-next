@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
             },
             {
               title: 'Contact Us',
-              content: 'If you have questions about this privacy policy, contact us at: info@digitalexperthub.com or +91 79867 13605.',
+              content: 'If you have questions about this privacy policy, contact us at: info@digitalexperthub.com or +91 79866 05418.',
             },
           ].map((section) => (
             <div key={section.title}>

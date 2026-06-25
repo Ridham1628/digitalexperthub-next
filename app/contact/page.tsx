@@ -75,7 +75,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-display font-bold text-paper mb-1">Phone / WhatsApp</p>
-                    <a href="tel:+917986713605" className="text-paper/70 hover:text-lime transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime">+91 79867 13605</a>
+                    <a href="tel:+917986605418" className="text-paper/70 hover:text-lime transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime">+91 79866 05418</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
