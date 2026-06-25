@@ -203,7 +203,7 @@ export default function Header() {
         {megaOpen && (
           <div
             ref={megaRef}
-            className="hidden lg:block absolute top-full left-0 right-0 bg-ink/98 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+            className="hidden lg:block absolute top-full left-0 right-0 bg-ink border-b border-white/10 shadow-2xl z-50"
           >
             <div className="wrap py-8">
               <div className="grid grid-cols-4 gap-8">
